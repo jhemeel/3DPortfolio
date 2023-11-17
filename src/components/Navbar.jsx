@@ -23,7 +23,7 @@ const Navbar = () => {
         >
           <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
           <p className="text-white text-[18px] cursor-pointer font-bold flex">
-            Jemeel &nbsp;<span className="sm:block hidden">| Dokita.com</span>
+            Jemeel &nbsp;<span className="sm:block hidden">| Dokto.com.ng</span>
           </p>
         </Link>
         <ul className="list-none hidden sm:flex flex-row gap-10">
