@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-import Computers from "../components/canvas/Computers";
 import ComputerCanvas from "../components/canvas/Computers";
 
 const Hero = () => {
@@ -20,7 +19,7 @@ const Hero = () => {
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             {" "}
-            Full satck Web Developer; <br className="sm:block md:hidden " />{" "}
+            Full Stack Web Developer; <br className="sm:block md:hidden " />{" "}
             Medical Blog Writer
           </p>
         </div>

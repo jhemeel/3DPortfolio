@@ -7,6 +7,13 @@ import Earth from './canvas/Earth'
 import emailjs from '@emailjs/browser'
 
 
+
+
+// template_5itxbdd
+// service_xnyv38k
+// public key hYPekNej7FH5Yd-gI
+// private key 6oNUubS8d1YJvFMeDdJ3_
+
 const Contact = () => {
   const formRef = useRef()
   const [form,setForm] = useState({
@@ -16,8 +23,37 @@ const Contact = () => {
   })
   const [loading, setLoading] = useState(false)
 
-  const handleChange =(e) => {}
-  const handleSubmit =(e) => {}
+  const handleChange =(e) => {
+    const {name, value} = e.target
+    setForm({...form, [name]: value})
+  }
+  const handleSubmit =(e) => {
+    e.preventDefault()
+    setLoading(true)
+    emailjs.send('service_xnyv38k',
+    'template_5itxbdd',
+    {
+      from_name: form.name,
+      to_name: 'jemeel',
+      form_emsil: form.email,
+      to_email: 'sadiqadekunle1@gmail.com',
+      message: form.message
+    },
+    'hYPekNej7FH5Yd-gI',
+    ).then(()=>{
+      setLoading(false)
+      alert("Thank You, I will get back to you as soon as posible.")
+      setForm({
+        name: '',
+        email: '',
+        message: ''
+      }), (error) =>{
+        setLoading(false)
+        console.log(error)
+        alert('something went wrong')
+      };
+    })
+  }
 
   return (
     <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden" >

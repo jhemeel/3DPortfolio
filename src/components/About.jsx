@@ -51,14 +51,14 @@ const About = () => {
     variants={fadeIn("", "", 0.1, 1)}
     className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px] text-justify"
     >
-       I am a skilled full stack web developer with experience in React Js, Vanilla javascript and expertise in frameworks like three.js and tailwind css. 
+       I am a skilled full stack web developer with experience in React Js, Vanilla javascript and expertise in frameworks like django and tailwind css. 
       I have built numerous server side web applications with backend teachnology such as django and restful APIs.
-      I am a quick learner and collaborate closely with clients to ceate efficient, scalable and user-friendly solutions that solves real world challenges.
+      I am a quick learner and eager to collaborate closely with clients to ceate efficient, scalable and user-friendly solutions that solves real world challenges.
       Let's work together to bring your ideas to live!
     </motion.p>
 
     <div 
-    className='mt-20 flex flex-wrap gap-10'
+    className='mt-20 flex flex-wrap justify-center gap-10'
     >
       {services.map((service, index) => (
         <ServiceCard key={service.title} index={index} {...service}/>
